@@ -13,8 +13,6 @@ const AdminLogin = () => {
         email: '',
         password: ''
     })
-
-    console.log(loader, errorMessage, successMessage)
     const inputHandle = (e) => {
         setSatate({
             ...state,

@@ -12,6 +12,7 @@ const MainLayout = () => {
   const { userInfo } = useSelector(state => state.auth)
   const [showSidebar, setShowSidebar] = useState(false)
 
+ 
   useEffect(() => {
     if (userInfo && userInfo.role === 'seller') {
       socket.emit('add_seller', userInfo._id, userInfo)
