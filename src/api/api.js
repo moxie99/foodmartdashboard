@@ -1,7 +1,7 @@
 import axios from 'axios';
-const localBaseURL = 'http://localhost:5000/api';
-const prodBaseURL = 'https://foodmart-o1ja.onrender.com/api';
+const localBaseURL = 'http://localhost:5000';
+const prodBaseURL = 'https://foodmart-o1ja.onrender.com';
 const api = axios.create({
-  baseURL: localBaseURL,
+  baseURL: `${prodBaseURL}/api`,
 });
 export default api;

@@ -6,6 +6,7 @@ import Pagination from '../Pagination'
 import { useDispatch, useSelector } from 'react-redux'
 import { get_deactive_sellers } from '../../store/Reducers/sellerReducer'
 import { seller } from '../../assets/images'
+import { isEmptyArray } from 'formik'
 
 const DeactiveSellers = () => {
 
@@ -25,8 +26,6 @@ const DeactiveSellers = () => {
         }
         dispatch(get_deactive_sellers(obj))
     }, [searchValue, currentPage, parPage])
-
-    console.log(sellers[0].image === "")
 
     return (
         <div className='px-2 lg:px-7 pt-5'>
@@ -56,10 +55,11 @@ const DeactiveSellers = () => {
                         </thead>
                         <tbody className='text-sm font-normal'>
                             {
+                                sellers && !isEmptyArray(sellers) &&
                                 sellers.map((d, i) => <tr key={i}>
                                     <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>{i + 1}</td>
                                     <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>
-                                        <img className='w-[45px] h-[45px]' src={d.image === "" || d.image !== null  ?   seller : d.image} alt="" />
+                                        <img className='w-[45px] h-[45px]' src={d.image === "" ? seller :  d.image} alt="" />
                                     </td>
                                     <td scope='row' className='py-1 px-4 font-medium whitespace-nowrap'>
                                         <span>{d.name}</span>
