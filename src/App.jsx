@@ -14,7 +14,7 @@ function App() {
   }, [])
   useEffect(() => {
     if (token) {
-      console.log(token, "+++++++++++++")
+      console.log(token, "======")
       dispatch(get_user_info())
     }
   }, [token])
