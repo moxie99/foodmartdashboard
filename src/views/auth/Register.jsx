@@ -107,7 +107,7 @@ const Register = () => {
                   className='absolute right-3 top-2 cursor-pointer'
                 >
                   {/* Use an eye icon and a closed eye icon */}
-                  {state.showPassword ? <IoEyeSharp /> : <FaEyeSlash />}
+                  {state.showPassword ? <FaEyeSlash /> : <IoEyeSharp />}
                 </span>
               </div>
             </div>
