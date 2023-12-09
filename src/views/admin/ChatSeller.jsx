@@ -28,12 +28,14 @@ const ChatSeller = () => {
 
     const send = (e) => {
         e.preventDefault()
-        dispatch(send_message_seller_admin({
+        dispatch(
+          send_message_seller_admin({
             senderId: '',
             receverId: sellerId,
             message: text,
-            senderName: 'Myshop support'
-        }))
+            senderName: 'Myshop support',
+          })
+        );
         setText('')
     }
 
@@ -62,7 +64,7 @@ const ChatSeller = () => {
             if (recevedMessage.senderId === sellerId && recevedMessage.receverId === ''){
                 dispatch(updateSellerMessage(recevedMessage))
             }else{
-                toast.success(recevedMessage.senderName + ' send a message')
+                toast.success(recevedMessage.senderName + ' sends a message');
             }
         }
     }, [recevedMessage])
