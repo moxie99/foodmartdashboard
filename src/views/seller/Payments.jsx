@@ -73,10 +73,10 @@ const Payments = () => {
         e.preventDefault()
         console.log(availableAmount - amount)
         if (availableAmount - amount > 10) {
-            dispatch(send_withdrowal_request({ amount, sellerId: userInfo._id }))
-            setAmount(0)
+          dispatch(send_withdrowal_request({ amount, sellerId: userInfo._id }));
+          setAmount(0);
         } else {
-            toast.error('insufficient balance')
+          toast.error('insufficient balance');
         }
     }
     return (

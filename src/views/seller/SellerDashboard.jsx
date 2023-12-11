@@ -20,8 +20,6 @@ const SellerDashboard = () => {
         recentOrders,
         recentMessage } = useSelector(state => state.dashboardIndex)
 
-        console.log(userInfo, "0000")
-
     const state = {
         series: [
             {

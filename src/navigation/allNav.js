@@ -87,6 +87,20 @@ export const allNav = [
     path: '/seller/dashboard/products',
   },
   {
+    id: 11,
+    title: 'Add Banner',
+    icon: <AiOutlinePlus />,
+    role: 'seller',
+    path: '/seller/dashboard/add-banner',
+  },
+  {
+    id: 11,
+    title: 'All Banner',
+    icon: <RiProductHuntLine />,
+    role: 'seller',
+    path: '/seller/dashboard/banners',
+  },
+  {
     id: 12,
     title: 'Discount Product',
     icon: <RiProductHuntLine />,

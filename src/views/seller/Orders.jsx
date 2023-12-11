@@ -86,7 +86,7 @@ const Orders = () => {
                       scope='row'
                       className='py-3 px-4 font-medium whitespace-nowrap'
                     >
-                      ${d.date}
+                      {d.date}
                     </td>
                     <td
                       scope='row'

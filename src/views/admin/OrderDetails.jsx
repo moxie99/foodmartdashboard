@@ -66,7 +66,7 @@ const OrderDetails = () => {
                     </h2>
                     <p>
                       <span className='text-sm'>
-                        ${order.shippingInfo?.address}{' '}
+                        Address: {order.shippingInfo?.address}{' '}
                         {order.shippingInfo?.province}{' '}
                         {order.shippingInfo?.city} {order.shippingInfo?.area}
                       </span>
