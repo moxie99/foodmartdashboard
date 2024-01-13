@@ -62,6 +62,7 @@ const Category = () => {
             page: parseInt(currentPage),
             searchValue
         }
+        console.log(obj);
         dispatch(get_category(obj))
     }, [searchValue, currentPage, parPage])
     return (

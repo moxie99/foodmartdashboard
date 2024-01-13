@@ -113,6 +113,7 @@ const returnRole = (token) => {
 
     if (new Date() > expireTime) {
       localStorage.removeItem('accessToken');
+      
       return '';
     } else {
       return decodeToken.role;
